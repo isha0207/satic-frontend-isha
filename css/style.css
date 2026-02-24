@@ -1,6 +1,12 @@
 :root {
-    --primary-color: #4a90e2;
-    --bg-color: #f4f4f4;
+
+  --primary-color: #6c63ff;       /* Your Brand Color */
+  --primary-hover: #5a52e0;
+  --text-color: #ffffff;
+  --border-radius: 6px;
+  --transition-speed: 0.3s;
+  --disabled-color: #bdbdbd;
+
 }
 
 body {
@@ -8,6 +14,46 @@ body {
     background-color: var(--bg-color);
     text-align: center;
     margin: 0;
+}
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: var(--border-radius);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-speed) ease;
+  text-align: center;
+}
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+.btn-primary:active {
+  transform: scale(0.97);
+}
+.btn-outline {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+.btn-outline:hover {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+.btn-outline:active {
+  transform: scale(0.97);
+}
+.btn:disabled {
+  background-color: var(--disabled-color);
+  color: var(--text-color);
+  border-color: var(--disabled-color);
+  cursor: not-allowed;
+  opacity: 0.7;
 }
 
 header {
