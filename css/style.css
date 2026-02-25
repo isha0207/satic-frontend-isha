@@ -1,20 +1,58 @@
+/* =========================
+   1. Design Tokens (Root)
+========================= */
 :root {
-
-  --primary-color: #6c63ff;       /* Your Brand Color */
+  --primary-color: #6c63ff;
   --primary-hover: #5a52e0;
-  --text-color: #ffffff;
+  --text-light: #ffffff;
+  --text-dark: #222222;
+  --text-muted: #555555;
+  --bg-light: #f8f9fc;
   --border-radius: 6px;
   --transition-speed: 0.3s;
   --disabled-color: #bdbdbd;
-
 }
 
+
+/* =========================
+   2. Reset
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* =========================
+   3. Base Styles
+========================= */
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--bg-color);
-    text-align: center;
-    margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
 }
+
+main {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+footer {
+  background-color: #222;
+  color: var(--text-light);
+  padding: 15px;
+  text-align: center;
+}
+
+
+/* =========================
+   4. Button Component System (Day 2)
+========================= */
 .btn {
   display: inline-block;
   padding: 10px 20px;
@@ -26,61 +64,56 @@ body {
   transition: all var(--transition-speed) ease;
   text-align: center;
 }
+
+/* Primary Button */
 .btn-primary {
   background-color: var(--primary-color);
-  color: var(--text-color);
+  color: var(--text-light);
 }
+
 .btn-primary:hover {
   background-color: var(--primary-hover);
 }
+
 .btn-primary:active {
   transform: scale(0.97);
 }
+
+/* Outline Button */
 .btn-outline {
   background-color: transparent;
   color: var(--primary-color);
   border: 2px solid var(--primary-color);
 }
+
 .btn-outline:hover {
   background-color: var(--primary-color);
-  color: var(--text-color);
+  color: var(--text-light);
 }
+
 .btn-outline:active {
   transform: scale(0.97);
 }
+
+/* Disabled State */
 .btn:disabled {
   background-color: var(--disabled-color);
-  color: var(--text-color);
+  color: var(--text-light);
   border-color: var(--disabled-color);
   cursor: not-allowed;
   opacity: 0.7;
 }
 
-header {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 20px;
-}
 
-main {
-    padding: 20px;
-}
-
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Full Width Header */
+/* =========================
+   5. Navigation Bar (Day 3)
+========================= */
 .header {
   width: 100%;
   background-color: #ffffff;
   border-bottom: 1px solid #eaeaea;
 }
 
-/* Main Navbar Layout */
 .navbar {
   max-width: 1200px;
   margin: 0 auto;
@@ -88,52 +121,43 @@ main {
 
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Creates 3 zones */
+  justify-content: space-between;
 }
 
-/* Brand */
+/* Brand (Left Zone) */
 .brand a {
   text-decoration: none;
   font-size: 20px;
   font-weight: 600;
-  color: #111;
+  color: var(--text-dark);
 }
 
-/* Nav Links */
+/* Navigation Links (Center Zone) */
 .nav-links {
   list-style: none;
-
   display: flex;
-  gap: 40px; /* Professional spacing */
+  gap: 40px;
 }
 
 .nav-links a {
   text-decoration: none;
   font-weight: 500;
-  color: #555;
-  transition: all 0.3s ease;
+  color: var(--text-muted);
+  transition: color var(--transition-speed) ease;
 }
 
-/* Hover state (Different from button hover) */
+/* Hover State (Different from Button Hover) */
 .nav-links a:hover {
-  color: #000;
-  border-bottom: 2px solid #000;
-  padding-bottom: 4px;
+  color: var(--primary-color);
 }
 
-/* Active link */
+/* Active Link */
 .nav-links a.active {
-  color: #007bff;
+  color: var(--primary-color);
   font-weight: 600;
 }
 
-/* CTA container (no extra margin hacks) */
+/* CTA Container (Right Zone) */
 .nav-cta {
   display: flex;
-}
-
-footer {
-    background-color: #222;
-    color: white;
-    padding: 10px;
 }
