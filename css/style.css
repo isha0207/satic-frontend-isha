@@ -103,59 +103,75 @@ footer {
   cursor: not-allowed;
   opacity: 0.7;
 }
-
-
-/* =========================
-   5. Navigation Bar (Day 3)
-========================= */
+/* ===== Navbar Background ===== */
 .header {
   width: 100%;
-  background-color: #ffffff;
-  border-bottom: 1px solid #eaeaea;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
+/* ===== Layout ===== */
 .navbar {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 18px 40px;
+  padding: 20px 50px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-/* Brand (Left Zone) */
+/* ===== Logo ===== */
 .brand a {
-  text-decoration: none;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 600;
-  color: var(--text-dark);
+  color: #2b6cb0;
+  text-decoration: none;
 }
 
-/* Navigation Links (Center Zone) */
+/* ===== Links ===== */
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 40px;
+  gap: 45px;
 }
 
 .nav-links a {
   text-decoration: none;
   font-weight: 500;
-  color: var(--text-muted);
-  transition: color var(--transition-speed) ease;
+  color: #444;
+  transition: 0.3s ease;
 }
 
-/* Hover State (Different from Button Hover) */
+/* Hover effect (subtle like image) */
 .nav-links a:hover {
-  color: var(--primary-color);
+  color: #2b6cb0;
 }
 
-/* Active Link */
+/* Active link */
 .nav-links a.active {
-  color: var(--primary-color);
+  color: #2b6cb0;
   font-weight: 600;
 }
+
+/* ===== IMPORTANT: Button Should Look Like Screenshot ===== */
+/* Only use this if your Day 2 button was simple */
+/* If already gradient, no need to rewrite */
+
+.btn-primary {
+  padding: 10px 22px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #2b6cb0, #3182ce);
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #1e4e8c, #2c5282);
+}
+
 
 /* CTA Container (Right Zone) */
 .nav-cta {
