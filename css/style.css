@@ -55,6 +55,71 @@ body {
   cursor: not-allowed;
   opacity: 0.7;
 }
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Full Width Header */
+.header {
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #eaeaea;
+}
+
+/* Main Navbar Layout */
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Creates 3 zones */
+}
+
+/* Brand */
+.brand a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  color: #111;
+}
+
+/* Nav Links */
+.nav-links {
+  list-style: none;
+
+  display: flex;
+  gap: 40px; /* Professional spacing */
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #555;
+  transition: all 0.3s ease;
+}
+
+/* Hover state (Different from button hover) */
+.nav-links a:hover {
+  color: #000;
+  border-bottom: 2px solid #000;
+  padding-bottom: 4px;
+}
+
+/* Active link */
+.nav-links a.active {
+  color: #007bff;
+  font-weight: 600;
+}
+
+/* CTA container (no extra margin hacks) */
+.nav-cta {
+  display: flex;
+}
 
 header {
     background-color: var(--primary-color);
