@@ -1,26 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Navbar</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Internship Hub</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- ================= NAVBAR ================= -->
-<header class="navbar">
+<nav class="navbar">
   <div class="nav-container">
+    
+    <div class="logo">Internship Hub</div>
 
-    <div class="logo">Mondal Isha</div>
-
-    <nav class="nav-links">
-      <a href="#">Home</a>
-      <a href="#">Projects</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-      <button class="btn btn-primary">Hire Me</button>
-    </nav>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Internships</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
 
     <div class="hamburger">
       <span></span>
@@ -29,47 +27,21 @@
     </div>
 
   </div>
-</header>
+</nav>
 
-<!-- ================= CONTENT ================= -->
 <div class="container">
-
   <div class="card">
-    <h3>H3 My Frontend Journey</h3>
-    <ul>
-      <li>Day 1: Setup & Deployment (Completed)</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h2>H2 Day 2: Button Component System</h2>
-
-    <p>Primary Buttons</p>
+    <h2>Welcome</h2>
     <div class="button-row">
-      <button class="btn btn-primary">Default</button>
-      <button class="btn btn-primary">Hover</button>
-      <button class="btn btn-primary">Active</button>
-      <button class="btn btn-primary" disabled>Disabled</button>
+      <button class="btn btn-primary">Apply Now</button>
+      <button class="btn btn-outline">Learn More</button>
     </div>
-
-    <br>
-
-    <p>Secondary Buttons (Outline)</p>
-    <div class="button-row">
-      <button class="btn btn-outline">Default</button>
-      <button class="btn btn-outline">Hover</button>
-      <button class="btn btn-outline">Active</button>
-      <button class="btn btn-outline" disabled>Disabled</button>
-    </div>
-
   </div>
-
 </div>
 
-<!-- ================= FOOTER ================= -->
-<div class="footer">
-  © 2026 Mondal Isha
-</div>
+<footer class="footer">
+  © 2026 Internship Hub
+</footer>
 
 <script src="script.js"></script>
 </body>
