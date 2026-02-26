@@ -1,15 +1,15 @@
-console.log("Day 4 Navbar Loaded");
+console.log("Navbar Working");
 
 const hamburger = document.querySelector(".hamburger");
-const body = document.body;
+const navbar = document.querySelector(".navbar");
 const links = document.querySelectorAll(".nav-links a");
 
 hamburger.addEventListener("click", () => {
-  body.classList.toggle("nav-open");
+  navbar.classList.toggle("nav-open");
 });
 
 links.forEach(link => {
   link.addEventListener("click", () => {
-    body.classList.remove("nav-open");
+    navbar.classList.remove("nav-open");
   });
 });
