@@ -1,35 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <title>My Frontend Internship</title>
-
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontend Journey</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
+<!-- ================= NAVBAR ================= -->
 <header class="navbar">
   <div class="nav-container">
-    
-    <div class="logo">Internship Hub</div>
+
+    <div class="logo">Your Name</div>
 
     <nav class="nav-links">
       <a href="#">Home</a>
-      <a href="#">Internships</a>
+      <a href="#">Projects</a>
       <a href="#">About</a>
       <a href="#">Contact</a>
+      <button class="btn btn-primary">Hire Me</button>
     </nav>
 
-    <!-- CTA Button (Reuse your Primary Button Component) -->
-    <button class="btn btn-primary desktop-cta">Get Started</button>
-
-    <!-- Hamburger -->
     <div class="hamburger">
       <span></span>
       <span></span>
@@ -39,40 +31,46 @@
   </div>
 </header>
 
-    <!-- Page Content -->
-    <main>
-        <section>
-            <h1>Isha</h1>
-            <h2>Static Frontend Intern</h2>
-        </section>
+<!-- ================= CONTENT ================= -->
+<div class="container">
 
-        <section>
-            <h3>My Frontend Journey</h3>
-            <ul>
-                <li>Day 1: Setup & Development (Completed)</li>
-            </ul>
-        </section>
+  <div class="card">
+    <h3>H3 My Frontend Journey</h3>
+    <ul>
+      <li>Day 1: Setup & Deployment (Completed)</li>
+    </ul>
+  </div>
 
-        <section class="button-showcase">
-            <h2>Button Component System</h2>
+  <div class="card">
+    <h2>H2 Day 2: Button Component System</h2>
 
-            <h3>Primary Buttons</h3>
-            <button class="btn btn-primary">Login</button>
-            <button class="btn btn-primary">Sign Up For Our Newsletter</button>
-            <button class="btn btn-primary" disabled>Disabled Primary</button>
+    <p>Primary Buttons</p>
+    <div class="button-row">
+      <button class="btn btn-primary">Default</button>
+      <button class="btn btn-primary">Hover</button>
+      <button class="btn btn-primary">Active</button>
+      <button class="btn btn-primary" disabled>Disabled</button>
+    </div>
 
-            <h3>Outline Buttons</h3>
-            <button class="btn btn-outline">View Details</button>
-            <button class="btn btn-outline">Apply Now</button>
-            <button class="btn btn-outline" disabled>Disabled Outline</button>
-        </section>
-    </main>
+    <br>
 
-    <footer>
-        <p>© 2026 Isha</p>
-    </footer>
+    <p>Secondary Buttons (Outline)</p>
+    <div class="button-row">
+      <button class="btn btn-outline">Default</button>
+      <button class="btn btn-outline">Hover</button>
+      <button class="btn btn-outline">Active</button>
+      <button class="btn btn-outline" disabled>Disabled</button>
+    </div>
 
-    <script src="js/script.js"></script>
+  </div>
+
+</div>
+
+<!-- ================= FOOTER ================= -->
+<div class="footer">
+  © 2024 Your Name
+</div>
+
+<script src="script.js"></script>
 </body>
-
 </html>
