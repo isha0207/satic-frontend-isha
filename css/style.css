@@ -67,6 +67,9 @@ body{
   transition:0.3s;
 }
 
+.hamburger{
+   display:flex;
+
 /* ===== MOBILE MENU OPEN ===== */
 .nav-open .nav-links{
   display:flex;
