@@ -10,7 +10,7 @@ body{
   background:#f5f7fa;
 }
 
-/* NAVBAR */
+/* ================= NAVBAR ================= */
 .navbar{
   background:white;
   padding:18px 30px;
@@ -26,6 +26,7 @@ body{
   align-items:center;
 }
 
+/* LOGO */
 .logo{
   font-size:20px;
   font-weight:bold;
@@ -39,7 +40,7 @@ body{
 }
 
 .nav-links li{
-  margin:10px 0;
+  margin:15px 0;
 }
 
 .nav-links a{
@@ -75,12 +76,13 @@ body{
   font-size:20px;
 }
 
-/* DESKTOP */
+/* ================= DESKTOP ================= */
 @media(min-width:768px){
 
   .nav-links{
     display:flex;
     gap:30px;
+    align-items:center;
   }
 
   .nav-links li{
@@ -93,7 +95,7 @@ body{
 
 }
 
-/* CONTENT */
+/* ================= CONTENT ================= */
 .container{
   max-width:1000px;
   margin:50px auto;
@@ -107,7 +109,7 @@ body{
   box-shadow:0 4px 15px rgba(0,0,0,0.05);
 }
 
-/* BUTTON SYSTEM */
+/* BUTTONS */
 .button-row{
   margin-top:15px;
   display:flex;
