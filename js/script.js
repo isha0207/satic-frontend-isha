@@ -1,4 +1,4 @@
-console.log("Day 1 Task Loaded");
+console.log("Day 4 Navbar Loaded");
 
 const hamburger = document.querySelector(".hamburger");
 const body = document.body;
@@ -15,7 +15,7 @@ hamburger.addEventListener("click", () => {
   }
 });
 
-// Auto Close on link click
+// Auto Close
 links.forEach(link => {
   link.addEventListener("click", () => {
     body.classList.remove("nav-open");
