@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="UTF-8">
+  <meta charset="UTF-8">
   <title>Frontend Journey</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">  
-     
-
-
+  <link rel="stylesheet" href="css/style.css">  
 </head>
+
 <body>
 
 <header class="header">
@@ -32,27 +30,48 @@
   </div>
 </header>
 
-<main class="container">
+<main>
 
-  <!-- Find Tasks Section -->
-  <section class="card">
-    <h2>Find Your Tasks</h2>
-    <div class="search-box">
-      <input type="text" placeholder="Search content...">
-      <button class="search-btn">🔍</button>
+  <!-- ✅ Hero Section (Merged Properly) -->
+  <section class="hero">
+    <div class="hero-content container">
+      <h1>Find Your Internship</h1>
+      <p>Search opportunities that match your skills</p>
+
+      <form class="search-form" id="searchForm">
+        
+        <!-- Accessible Label -->
+        <label for="searchInput" class="visually-hidden">
+          Search internships
+        </label>
+
+        <input 
+          type="text" 
+          id="searchInput" 
+          placeholder="Search internships..."
+          aria-label="Search internships"
+        >
+
+        <button type="submit" class="search-btn">
+          🔍
+        </button>
+
+      </form>
     </div>
   </section>
 
+
   <!-- Frontend Journey -->
-  <section class="card">
+  <section class="card container">
     <h3>My Frontend Journey</h3>
     <ul>
       <li>Day 1: Setup & Deployment (Completed)</li>
     </ul>
   </section>
 
+
   <!-- Button Component System -->
-  <section class="card">
+  <section class="card container">
     <h2>Day 2: Button Component System</h2>
 
     <p>Primary Buttons</p>
