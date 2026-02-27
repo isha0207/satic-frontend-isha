@@ -1,4 +1,10 @@
-function toggleMenu() {
+document.addEventListener("DOMContentLoaded", function () {
+
+  const menuBtn = document.getElementById("menuBtn");
   const nav = document.getElementById("navMenu");
-  nav.classList.toggle("active");
-}
+
+  menuBtn.addEventListener("click", function () {
+    nav.classList.toggle("active");
+  });
+
+});
