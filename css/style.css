@@ -8,6 +8,7 @@
   --white: #ffffff;
   --transition-speed: 0.3s;
 }
+
 /* Reset */
 * {
   margin: 0;
@@ -32,6 +33,7 @@ body {
   background: white;
   padding: 15px 0;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: relative;
 }
 
 .nav-container {
@@ -58,6 +60,11 @@ body {
 
 .nav a:hover {
   color: #1f4f82;
+}
+
+/* 🔥 Important for toggle */
+.nav.show {
+  display: flex;
 }
 
 /* Hamburger */
@@ -168,7 +175,7 @@ h2, h3 {
     border-radius: 8px;
   }
 
-  .nav.active {
+  .nav.show {
     display: flex;
   }
 
