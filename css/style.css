@@ -1,3 +1,13 @@
+/* ===============================
+   DESIGN TOKENS (CSS VARIABLES)
+================================= */
+:root {
+  --primary-color: #6c63ff;
+  --bg-color: #f4f4f4;
+  --text-color: #222;
+  --white: #ffffff;
+  --transition-speed: 0.3s;
+}
 /* Reset */
 * {
   margin: 0;
