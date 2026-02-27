@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const menuBtn = document.getElementById("menuBtn");
   const nav = document.getElementById("navMenu");
 
-  menuBtn.addEventListener("click", function () {
+  menuBtn.addEventListener("onclick", function () {
     nav.classList.toggle("active");
   });
 
