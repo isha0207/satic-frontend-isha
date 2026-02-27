@@ -1,59 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Button Component System</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <title>Frontend Journey</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="navbar">
-        <div class="logo">Your Name</div>
-        <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button>
-        <nav class="nav-links" id="nav-links">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
-        </nav>
-    </header>
 
-    <main class="container">
-        <h1>H3 My Frontend Journey</h1>
-        <p>Day 1: Setup & Deployment (Completed)</p>
+<header class="header">
+  <div class="container nav-container">
+    <h1 class="logo">Your Name</h1>
 
-        <section class="component-section">
-            <h2>H2 Day 2: Button Component System</h2>
-            
-            <div class="button-row">
-                <p>Primary Buttons</p>
-                <div class="btn-group">
-                    <button class="btn btn-primary">Default</button>
-                    <button class="btn btn-primary hover">Hover</button>
-                    <button class="btn btn-primary active">Active</button>
-                    <button class="btn btn-primary" disabled>Disabled</button>
-                </div>
-            </div>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
-            <div class="button-row">
-                <p>Secondary Buttons (Outline)</p>
-                <div class="btn-group">
-                    <button class="btn btn-secondary">Default</button>
-                    <button class="btn btn-secondary hover">Hover</button>
-                    <button class="btn btn-secondary active">Active</button>
-                    <button class="btn btn-secondary" disabled>Disabled</button>
-                </div>
-            </div>
-        </section>
-    </main>
+    <nav id="navMenu" class="nav">
+      <a href="#">Home</a>
+      <a href="#">Tasks</a>
+      <a href="#">Journey</a>
+      <a href="#">Contact</a>
+    </nav>
+  </div>
+</header>
 
-    <footer>
-        <p>&copy; 2024 Your Name</p>
-    </footer>
+<main class="container">
 
-    <script src="script.js"></script>
+  <!-- Find Tasks Section -->
+  <section class="card">
+    <h2>Find Your Tasks</h2>
+    <div class="search-box">
+      <input type="text" placeholder="Search content...">
+      <button class="search-btn">🔍</button>
+    </div>
+  </section>
+
+  <!-- Frontend Journey -->
+  <section class="card">
+    <h3>My Frontend Journey</h3>
+    <ul>
+      <li>Day 1: Setup & Deployment (Completed)</li>
+    </ul>
+  </section>
+
+  <!-- Button Component System -->
+  <section class="card">
+    <h2>Day 2: Button Component System</h2>
+
+    <p>Primary Buttons</p>
+
+    <div class="button-group">
+      <button class="btn primary">Default</button>
+      <button class="btn primary hover-btn">Hover</button>
+      <button class="btn primary active-btn">Active</button>
+      <button class="btn primary" disabled>Disabled</button>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  © 2026 Your Name
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
