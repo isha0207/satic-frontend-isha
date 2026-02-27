@@ -2,11 +2,10 @@
    DESIGN TOKENS (CSS VARIABLES)
 ================================= */
 :root {
-  --primary-color: #6c63ff;
-  --bg-color: #f4f4f4;
+  --primary-color: #1f4f82;
+  --bg-color: #f4f6f8;
   --text-color: #222;
   --white: #ffffff;
-  --transition-speed: 0.3s;
 }
 
 /* Reset */
@@ -18,7 +17,7 @@
 }
 
 body {
-  background-color: #f4f6f8;
+  background-color: var(--bg-color);
 }
 
 /* Container */
@@ -28,7 +27,10 @@ body {
   margin: auto;
 }
 
-/* Header */
+/* ===============================
+   HEADER + NAVBAR
+================================= */
+
 .header {
   background: white;
   padding: 15px 0;
@@ -43,10 +45,11 @@ body {
 }
 
 .logo {
-  color: #1f4f82;
+  color: var(--primary-color);
+  font-weight: bold;
 }
 
-/* Navigation */
+/* Navigation Menu */
 .nav {
   display: flex;
   gap: 20px;
@@ -56,18 +59,19 @@ body {
   text-decoration: none;
   color: #333;
   font-weight: 500;
+  transition: 0.3s;
 }
 
 .nav a:hover {
-  color: #1f4f82;
+  color: var(--primary-color);
 }
 
-/* 🔥 Important for toggle */
+/* Toggle Navbar */
 .nav.show {
   display: flex;
 }
 
-/* Hamburger */
+/* Hamburger Button */
 .menu-toggle {
   display: none;
   font-size: 22px;
@@ -76,43 +80,78 @@ body {
   cursor: pointer;
 }
 
-/* Cards */
-.card {
-  background: white;
-  padding: 25px;
-  margin: 25px 0;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+/* ===============================
+   HERO SECTION
+================================= */
+
+.hero {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #f8fafc;
 }
 
-h2, h3 {
-  margin-bottom: 15px;
+.hero-content h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
 }
 
-/* Search */
-.search-box {
+.hero-content p {
+  margin-bottom: 30px;
+  color: #555;
+}
+
+/* ===============================
+   SEARCH FORM
+================================= */
+
+.search-form {
   display: flex;
-  border: 2px solid #1f4f82;
-  border-radius: 6px;
-  overflow: hidden;
+  justify-content: center;
+  max-width: 500px;
+  margin: auto;
 }
 
-.search-box input {
+.search-form input {
   flex: 1;
-  padding: 10px;
-  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-right: none;
+  border-radius: 6px 0 0 6px;
   outline: none;
+  transition: 0.3s;
 }
 
+.search-form input:focus {
+  border-color: var(--primary-color);
+}
+
+/* Search Button */
 .search-btn {
-  background: #1f4f82;
+  padding: 12px 18px;
+  font-size: 18px;
+  border: 2px solid var(--primary-color);
+  background-color: var(--primary-color);
   color: white;
-  border: none;
-  padding: 0 15px;
   cursor: pointer;
+  border-radius: 0 6px 6px 0;
+  transition: 0.3s ease;
 }
 
-/* Buttons */
+.search-btn:hover {
+  background-color: #1e4ed8;
+}
+
+/* Accessible hidden label */
+.visually-hidden {
+  position: absolute;
+  left: -9999px;
+}
+
+/* ===============================
+   BUTTON SYSTEM
+================================= */
+
 .button-group {
   display: flex;
   flex-wrap: wrap;
@@ -147,7 +186,26 @@ h2, h3 {
   cursor: not-allowed;
 }
 
-/* Footer */
+/* ===============================
+   CARD DESIGN
+================================= */
+
+.card {
+  background: white;
+  padding: 25px;
+  margin: 25px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+h2, h3 {
+  margin-bottom: 15px;
+}
+
+/* ===============================
+   FOOTER
+================================= */
+
 .footer {
   text-align: center;
   padding: 15px;
@@ -155,9 +213,9 @@ h2, h3 {
   margin-top: 30px;
 }
 
-/* ===================== */
-/* Mobile Responsive */
-/* ===================== */
+/* ===============================
+   MOBILE RESPONSIVE
+================================= */
 
 @media (max-width: 768px) {
 
