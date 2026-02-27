@@ -204,6 +204,11 @@ body{
 
 .visually-hidden{
    position: absolute;
+   left:-9999px;
+}
+
+.visually-hidden{
+   position: absolute;
    width: 1px;
    height:1px;
    padding:0;
