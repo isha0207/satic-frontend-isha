@@ -1,12 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  const menuBtn = document.getElementById("menuBtn");
+  const toggleBtn = document.getElementById("menuToggle");
   const navMenu = document.getElementById("navMenu");
 
-  if (menuBtn && navMenu) {
-    menuBtn.addEventListener("click", function () {
-      navMenu.classList.toggle("show");
-    });
-  }
+  toggleBtn.addEventListener("click", function () {
+    navMenu.classList.toggle("show");
+  });
 
 });
