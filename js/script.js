@@ -31,7 +31,6 @@ form.addEventListener("submit", function(event) {
     console.log("Searching for: " + value);
   }
 });
-
 function createToast(type) {
   const container = document.getElementById("toast-container");
 
@@ -42,15 +41,19 @@ function createToast(type) {
   let icon = "";
 
   if (type === "success") {
-    message = "Action completed successfully!";
+    message = "Success: Project saved!";
     icon = "✔";
   } else {
-    message = "Something went wrong!";
+    message = "Error: Failed to fetch data.";
     icon = "⚠";
   }
 
+  // 🔥 Updated Design Structure
   toast.innerHTML = `
-    <span>${icon} ${message}</span>
+    <div class="toast-content">
+      <div class="toast-icon">${icon}</div>
+      <span>${message}</span>
+    </div>
     <button class="close-btn">×</button>
   `;
 
@@ -80,3 +83,5 @@ function removeToast(toast) {
     toast.remove(); // DOM CLEANUP
   }, 400);
 }
+
+
