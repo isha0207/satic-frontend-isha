@@ -324,6 +324,63 @@ body{
 }
 
 /* ===============================
+   CONTACT SECTION
+================================= */
+.contact-section {
+  padding: 60px 20px;
+  background: #f9f9f9;
+}
+
+.contact-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+input,
+textarea {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+/* Error State */
+input.error,
+textarea.error {
+  border-color: red;
+}
+
+/* Success State */
+input.success,
+textarea.success {
+  border-color: green;
+}
+
+.error-msg {
+  font-size: 13px;
+  color: red;
+  margin-top: 5px;
+}
+
+/* Disabled Button State */
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ===============================
    TOAST CONTAINER
 ================================= */
 #toast-container {
