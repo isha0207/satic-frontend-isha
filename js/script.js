@@ -84,4 +84,111 @@ function removeToast(toast) {
   }, 400);
 }
 
+const nameInput = document.getElementById("name");
+const emailInput = document.getElementById("email");
+const messageInput = document.getElementById("message");
+const submitBtn = document.getElementById("submitBtn");
+
+const nameError = document.getElementById("nameError");
+const emailError = document.getElementById("emailError");
+const messageError = document.getElementById("messageError");
+
+let touched = {
+  name: false,
+  email: false,
+  message: false
+};
+
+// Name Validation
+function validateName() {
+  const value = nameInput.value.trim();
+  if (value.length < 3) {
+    if (touched.name) {
+      nameError.textContent = "Name must be at least 3 characters.";
+      nameInput.classList.add("error");
+      nameInput.classList.remove("success");
+    }
+    return false;
+  } else {
+    nameError.textContent = "";
+    nameInput.classList.remove("error");
+    nameInput.classList.add("success");
+    return true;
+  }
+}
+
+// Email Validation
+function validateEmail() {
+  const value = emailInput.value.trim();
+  const validFormat = value.includes("@") && value.includes(".");
+  
+  if (!validFormat) {
+    if (touched.email) {
+      emailError.textContent = "Enter a valid email address.";
+      emailInput.classList.add("error");
+      emailInput.classList.remove("success");
+    }
+    return false;
+  } else {
+    emailError.textContent = "";
+    emailInput.classList.remove("error");
+    emailInput.classList.add("success");
+    return true;
+  }
+}
+
+// Message Validation
+function validateMessage() {
+  const value = messageInput.value.trim();
+  
+  if (value === "") {
+    if (touched.message) {
+      messageError.textContent = "Message cannot be empty.";
+      messageInput.classList.add("error");
+      messageInput.classList.remove("success");
+    }
+    return false;
+  } else {
+    messageError.textContent = "";
+    messageInput.classList.remove("error");
+    messageInput.classList.add("success");
+    return true;
+  }
+}
+
+// Enable / Disable Button
+function checkFormValidity() {
+  const isValid =
+    validateName() &&
+    validateEmail() &&
+    validateMessage();
+
+  submitBtn.disabled = !isValid;
+}
+
+// Input Events
+nameInput.addEventListener("input", () => {
+  touched.name = true;
+  validateName();
+  checkFormValidity();
+});
+
+emailInput.addEventListener("input", () => {
+  touched.email = true;
+  validateEmail();
+  checkFormValidity();
+});
+
+messageInput.addEventListener("input", () => {
+  touched.message = true;
+  validateMessage();
+  checkFormValidity();
+});
+
+// Prevent default submit
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+});
+
+
 
