@@ -3,16 +3,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const toggleBtn = document.getElementById("menuToggle");
   const navMenu = document.getElementById("navMenu");
 
+  console.log(toggleBtn);
+  console.log(navMenu);
+
   toggleBtn.addEventListener("click", function () {
+    console.log("clicked");
 
     navMenu.classList.toggle("show");
-
-    if (navMenu.classList.contains("show")) {
-      toggleBtn.innerHTML = "✖";
-    } else {
-      toggleBtn.innerHTML = "☰";
-    }
-
   });
 
 });
