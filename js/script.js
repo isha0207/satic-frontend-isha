@@ -217,6 +217,6 @@ backToTopBtn.addEventListener("click", () => {
 const menuToggle = document.getElementById("menuToggle");
 const navMenu = document.getElementById("navMenu");
 
-menuToggle.addEventListener("click", function(){
+menuToggle.addEventListener("click", function() {
   navMenu.classList.toggle("show");
 });
