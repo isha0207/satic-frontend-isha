@@ -87,36 +87,7 @@ body{
 .nav.show{
   display:flex;
 }
-/* ===============================
-   MOBILE NAVBAR
-================================= */
 
-@media (max-width:768px){
-
-  .menu-toggle{
-    display:block;
-  }
-
-  .nav{
-    position:absolute;
-    top:60px;
-    right:0;
-    background:var(--surface);
-    flex-direction:column;
-    width:200px;
-    padding:20px;
-    display:none;
-  }
-
-  .nav a{
-    padding:10px 0;
-  }
-
-  .nav.show{
-    display:flex;
-  }
-
-}
 /* ===============================
    MOBILE NAVBAR
 ================================= */
