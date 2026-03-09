@@ -214,9 +214,15 @@ backToTopBtn.addEventListener("click", () => {
     behavior: "smooth"
   });
 });
-const menuToggle = document.getElementById("menuToggle");
-const navMenu = document.getElementById("navMenu");
+document.addEventListener("DOMContentLoaded", function () {
 
-menuToggle.addEventListener("click", function() {
-  navMenu.classList.toggle("show");
+  const menuToggle = document.getElementById("menuToggle");
+  const navMenu = document.getElementById("navMenu");
+
+  if(menuToggle && navMenu){
+    menuToggle.addEventListener("click", function () {
+      navMenu.classList.toggle("show");
+    });
+  }
+
 });
